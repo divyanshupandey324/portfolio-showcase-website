@@ -90,7 +90,21 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-16">
             <div className="md:col-span-4">
               <h2 className="font-serif text-4xl text-white mb-4">About Me</h2>
-              <div className="w-8 h-[2px] bg-secondary" />
+              <div className="w-8 h-[2px] bg-secondary mb-8" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative group w-full aspect-square max-w-[280px] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-500 rounded-lg shadow-2xl"
+              >
+                <img 
+                  src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/profile.jpg`} 
+                  alt="Divyanshu Pandey" 
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-secondary/5 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+              </motion.div>
             </div>
             <div className="md:col-span-8">
               <motion.p 
