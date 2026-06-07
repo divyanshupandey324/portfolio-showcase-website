@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+.git
+.github
+.local
+.agents
+.cache
+artifacts/**/dist
+artifacts/**/.tsbuildinfo
+lib/**/dist
+lib/**/.tsbuildinfo
+tsconfig.tsbuildinfo
+*.log
